@@ -116,7 +116,7 @@ header nav ul li a{
     padding: 135px; /* Adds padding around the main section */
 }
 .index_section {
-    display: flex; /* Makes the container a flexbox */
+    display: flex;
     flex-direction: row; /* Aligns the child divs in a single row */
     justify-content: space-between; /* Centers the divs horizontally */
     align-items: flex-start; /* Aligns the content at the top */
@@ -126,10 +126,10 @@ header nav ul li a{
 }
 .index_section div {
     display: flex;
-    flex-direction: column; /* Stack the content vertically inside each div */
+    flex-direction: column;
     flex-wrap: nowrap;
-    align-items: center; /* Center the content horizontally */
-    text-align: center; /* Center-align the text */
+    align-items: center;
+    text-align: center;
     width: 30%; /* Set a fixed width for each div to prevent wrapping too early */
     height: 400px;
     border: 2px solid #03609D; /* Adds a visible border around each div */
@@ -139,16 +139,16 @@ header nav ul li a{
     background-color: rgba(255, 255, 255, 0.7); /* Adds a translucent white background */
 }
 .index_section img {
-    max-width: 100%; /* Ensures the image does not exceed the width of its container */
-    height: auto; /* Maintains the aspect ratio of the image */
+    max-width: 100%;
+    height: auto;
     object-fit: contain; /* Ensures the image fits inside the box without distortion */
     display: block; /* Removes any extra spacing caused by inline elements */
 }
 .triathlon_legs {
     display: flex;
-    justify-content: center; /* Centers the items horizontally */
-    align-items: center; /* Centers the items vertically */
-    gap: 50px; /* Adds spacing between the items */
+    justify-content: center; 
+    align-items: center; 
+    gap: 50px; 
     font-size: 50px;
     color: white; /* Ensure text is visible */
 }
@@ -156,51 +156,51 @@ header nav ul li a{
 /* NEWS PAGE */
 
 .news_main {
-    display: grid; /* Makes the main container a flexbox */
+    display: grid; 
     grid-template-columns: 200px auto; /* Defines two columns: 20% for news_other and 80% for news_highlight */
 }
 .news_other {
-    display: flex; /* Makes the section a flex container */
-    flex-direction: column; /* Stacks the items vertically */
-    align-items: center; /* Centers the items horizontally */
-    justify-content: space-evenly; /* Centers the items vertically */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: space-evenly; 
     background-color: #03609D;
     margin-top: 0;
     padding-top: 30px;
     padding-right: 10px;
 }
 .news_other div {
-    display: flex; /* Ensures each div is a flex container */
-    flex-direction: column; /* Stacks content vertically inside each div */
-    align-items: center; /* Centers content horizontally */
-    justify-content: center; /* Centers content vertically */
-    text-align: center; /* Centers text inside the div */
-    width: 100%; /* Ensures all divs take up the full width of the container */
-    gap: 10px; /* Adds spacing between elements inside the div */
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center; 
+    width: 100%; 
+    gap: 10px; 
 }
 .news_highlight {
     padding-left: 10px;;
     display: flex;
-    flex-direction: column; /* Stacks the content vertically */
-    background-color: rgba(3,96,157,0.5); /* Sets a semi-transparent background color */
+    flex-direction: column;
+    background-color: rgba(3,96,157,0.5);
     padding-right: 10px;
 }
 .news_highlight h2 {
-    text-align: center; /* Center-aligns the heading */
-    margin-bottom: 20px; /* Adds space below the heading */
+    text-align: center; 
+    margin-bottom: 20px; 
 }
 .news_highlight div {
     display: flex;
-    flex-direction: row; /* Stack the content vertically inside each div */
+    flex-direction: row; 
     gap: 10px;
     flex-wrap: wrap;
-    align-items: center; /* Center the content horizontally */
+    align-items: center; 
     justify-content: center;
     margin-bottom: 10px;
 }
 .news_highlight div img{
     max-width: 80%; /* Ensures the image and iframe scale properly */
-    height: auto; /* Maintains aspect ratio */
+    height: auto;
     flex: 1 1 45%; /* Allows both elements to take up 45% of the container width */
 }
 .news_video {
@@ -216,14 +216,14 @@ header nav ul li a{
     margin:20px;
 }
 .months .one{ 
-    width: 95%; /* Ensures the line spans the full width */
+    width: 95%; /* Ensures the line spans 95% of the full width */
     margin: 0px; /* Removes default margin */
     margin-left:10px;
-    top: 50%; /* Centers the line vertically */
+    top: 50%; 
     left:0;
 }
 .circle-container {
-    display: flex; /* Makes the container a flexbox */
+    display: flex; 
     justify-content: space-between; /* Distributes the circles evenly */
     align-items: center; /* Aligns the circles vertically */
     position: relative; /* Ensures the circles are positioned relative to the container */
@@ -240,21 +240,21 @@ header nav ul li a{
     height: 10px;
     background-color:#7DF0B0;
     border-radius: 50%;
-    z-index: 1; /* Ensures the circles appear above the line */
+    z-index: 1; 
 }
 .circle-container .ironmancircle {
     width: 10px;
     height: 10px;
     background-color: #D01F30;
     border-radius: 50%;
-    z-index: 1; /* Ensures the circles appear above the line */
+    z-index: 1; 
 }
 .circle-container .ironman703circle {
     width: 10px;
     height: 10px;
     background-color:#000000;
     border-radius: 50%;
-    z-index: 1; /* Ensures the circles appear above the line */
+    z-index: 1;
 }
 
 /* SHOP PAGE */
@@ -327,7 +327,7 @@ header nav ul li a{
     text-align: center;
 }
 .reference {
-    display: flex; /* Makes the section a flex container */
+    display: flex; 
     flex-direction: row; /* Aligns the items in a single row */
     align-items: center; /* Vertically aligns the items */
     justify-content: flex-start; /* Aligns the items to the left */
@@ -338,11 +338,11 @@ header nav ul li a{
     flex-wrap: nowrap; /* Prevents items from wrapping to the next line */
 }
 .months div {
-    display: flex; /* Makes the container a flexbox */
-    flex-direction: row; /* Aligns the <h2> elements in a row */
-    justify-content: space-between; /* Distributes the <h2> elements evenly */
-    align-items: center; /* Vertically aligns the <h2> elements */
-    text-align: center; /* Center-aligns the text inside the <h2> */
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between; 
+    align-items: center; 
+    text-align: center; 
     margin-left: 150px;
     width: 80%; /* Ensures all divs have the same width */
     gap: 20px; /* Adds consistent spacing between the <h2> elements */
@@ -387,7 +387,7 @@ header nav ul li a{
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* FOOTER */
+/* FOOTER - keep it consistent across all pages*/
 
 footer {
     display: flex;
@@ -422,52 +422,52 @@ footer p{
         width: 100%; /* Ensure the menu spans the full width */
     }
     .navbar-nav {
-        flex-direction: row; /* Align the menu items horizontally */
-        align-items: center; /* Center the items vertically */
+        flex-direction: row; 
+        align-items: center;
     }
     .navbar-toggler {
         display: block; /* Show the burger button */
     }
     .index_section {
-        flex-direction: column; /* Stack the divs vertically */
-        align-items: center; /* Center the divs horizontally */
-        gap: 20px; /* Add spacing between the rows */
+        flex-direction: column;
+        align-items: center; 
+        gap: 20px; 
     }
     .index_section div {
-        width: 200%; /* Make the divs take up most of the screen width */
-        height: auto; /* Adjust height to fit the content */
+        width: 200%; 
+        height: auto; 
     }
     .news_main {
         display: flex;
-        flex-direction: column; /* Stack the sections vertically */
+        flex-direction: column; 
     }
     .news_highlight {
         order: 1; /* Ensure news_highlight appears first */
     }
     .news_other {
         order: 2; /* Ensure news_other appears second */
-        display: flex; /* Make the section a flex container */
-        flex-direction: row; /* Align the items in a row */
+        display: flex; 
+        flex-direction: row; 
         flex-wrap: wrap; /* Allow wrapping if needed */
-        justify-content: center; /* Center the items horizontally */
-        gap: 20px; /* Add spacing between the items */
-        margin-top: 20px; /* Add spacing above the section */
+        justify-content: center; 
+        gap: 20px; 
+        margin-top: 20px; 
     }
     .news_other div {
         width: 45%; /* Make each item take up 45% of the row */
-        text-align: center; /* Center-align the text */
+        text-align: center; 
     }
     footer div {
         display: flex;
-        flex-direction: row; /* Keep the items in the div in a row */
-        justify-content: center; /* Center the items horizontally */
-        gap: 10px; /* Adds spacing between the items */
+        flex-direction: row; 
+        justify-content: center; 
+        gap: 10px; 
     }
     footer form {
         display: flex;
-        flex-direction: column; /* Stack the form elements vertically */
-        align-items: center; /* Center the form elements horizontally */
-        gap: 10px; /* Adds spacing between the form elements */
+        flex-direction: column; 
+        align-items: center; 
+        gap: 10px;
     }
     footer p {
         margin: 0;
