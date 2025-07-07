@@ -390,6 +390,9 @@ header nav ul li a{
 /* FOOTER - keep it consistent across all pages*/
 
 footer {
+    position: relative;
+    left: 0;
+    right: 0;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -397,9 +400,10 @@ footer {
     background-color: #03609D;
     color: white;
     padding: 20px;
-    margin-bottom: none;
-    width:100%;
-}
+    margin-bottom: 0;
+    width: 100vw;
+    box-sizing: border-box;
+  }
 footer p{
     margin: 0px;
     text-align:center;
