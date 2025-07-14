@@ -1,0 +1,44 @@
+@use "../utilities/_variables" as v;
+
+/*reset*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+// General styles
+html, body {
+    height: 100%; // Make the html and body span the full height of the viewport
+    margin: 0; // Remove default margins
+    display: flex; // Use Flexbox for layout
+    flex-direction: column; // Stack elements vertically
+}
+
+main {
+    flex: 1; // Allow the main content to grow and fill the available space
+}
+
+// General element styles
+img {
+    width: 200px;
+    height: auto;
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+    font-family: "Alkatra", system-ui;
+}
+.socialslogo {
+    width: 20px;
+    height: auto;
+}
+.shoplogo {
+    width: 60px;
+    height: auto;
+}
+h1, h2, h3, h4, p, a {
+    font-family: "Alkatra", system-ui;
+}

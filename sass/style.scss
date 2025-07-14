@@ -1,0 +1,394 @@
+@use "./utilities/_variables" as v; //bringin in variables and including redefinitions
+@use "./utilities/_mixin" as m; //bringing in mixins and including redefinitions
+
+@import "./base/_reset.scss"; // importing the reset with general sytles
+
+// Specific header styles
+header {
+    display: flex;
+    background-color: v.$main-color;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    margin: 0;
+
+    a {
+        h1 {
+            padding-left: 20px;
+            color: v.$typo-color;
+        }
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+    }
+}
+.navbar {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+}
+.navbar-expand-lg .navbar-collapse.show {
+        display: flex; /* Show the menu when expanded */
+        flex-direction: row; /* Align the menu items horizontally */
+        justify-content: flex-start; /* Distribute items evenly */
+        gap: 20px; /* Add spacing between items */
+        width: 100%; /* Ensure the menu spans the full width */
+        padding:0;
+        margin:0;
+}
+.navbar-nav {
+        flex-direction: row; 
+        align-items: center;
+        justify-content: flex-start;
+        padding-left:10px;
+        margin:0;
+}
+.navbar-toggler {
+        display: block; /* Show the burger button */
+        position: relative;
+        margin:0;
+        padding:0;
+        left:0;
+}
+ul {
+            display: flex;
+            flex-wrap: wrap;
+}
+.nav-link {
+            color: v.$typo-color;
+            list-style: none;
+            gap: 10px;
+            margin-right: 20px;
+}
+// Specific Index styles
+
+.index_main {
+    display: flex; // Makes the main container a flexbox
+    flex-direction: column; // Stacks the sections vertically
+    align-items: center; // Centers the content horizontally
+    gap: 50px; // Adds spacing between the sections
+    background-image: url('../assets/tritodaybackground.png'); // Set the single background image
+    background-size: cover; // Ensure the image covers the entire section
+    background-position: center; // Center the image
+    background-repeat: no-repeat; // Prevent the image from repeating
+    padding: 135px; // Adds padding around the main section
+
+    .index_section {
+        display: flex;
+        flex-direction: row; // Aligns the child divs in a single row
+        justify-content: space-between; // Centers the divs horizontally
+        align-items: flex-start; // Aligns the content at the top
+        gap: 20px; // Adds spacing between the divs
+        flex-wrap: nowrap; // Allows wrapping to the next line if needed
+        text-align: center; // Center-aligns the text inside the divs
+        .triathlon_legs {
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            gap: 50px; 
+            font-size: 50px;
+            color:v.$main-color; /* Ensure text is visible */
+        }
+        h3 {
+            color: v.$main-color;
+        }
+        div {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            align-items: center;
+            text-align: center;
+            width: 30%; // Set a fixed width for each div to prevent wrapping too early
+            height: 400px;
+            border: 2px solid v.$main-color; // Adds a visible border around each div
+            border-radius: 10px; // Rounds the corners of the border
+            padding: 20px; // Adds space inside the border
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); // Adds a subtle shadow for better visibility
+            background-color: v.$background-shadow; // Adds a translucent white background
+            .ironman_shop{
+            padding-bottom: 25px;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                object-fit: contain; // Ensures the image fits inside the box without distortion
+                display: block; // Removes any extra spacing caused by inline elements
+            }
+        }
+    }
+}
+
+//Specific News styles
+
+.news_main {
+    display: grid; 
+    grid-template-columns: 200px auto; /* Defines two columns: 20% for news_other and 80% for news_highlight */
+    .news_other{
+        display: flex; 
+        flex-direction: column;
+        align-items: center; 
+        justify-content: space-evenly; 
+        background-color: v.$main-color;
+        margin-top: 0;
+        padding-top: 30px;
+        padding-right: 10px;
+        div{
+            display: flex; 
+            flex-direction: column;
+            align-items: center; 
+            justify-content: center; 
+            text-align: center; 
+            width: 100%; 
+            gap: 10px; 
+        }
+    }
+    .news_highlight{
+        padding-left: 10px;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(3,96,157,0.5);
+        padding-right: 10px;
+        h2 {
+            text-align: center; 
+            margin-bottom: 20px; 
+        }
+        div {
+            display: flex;
+            flex-direction: row; 
+            gap: 10px;
+            flex-wrap: wrap;
+            align-items: center; 
+            justify-content: center;
+            margin-bottom: 10px;
+            img{
+                max-width: 80%; /* Ensures the image and iframe scale properly */
+                height: auto;
+                flex: 1 1 45%; /* Allows both elements to take up 45% of the container width */
+            }
+        }
+        iframe{
+            width:560px;
+            height:315px;
+            border:none;
+        }
+    }
+}
+
+// Specific shop styles
+
+.shop_main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    align-items: center; 
+    justify-items: center;
+    background-color: rgba(3,96,157,0.5);
+    .section {
+        flex: 30% 30% 30%; /* allows wrapping and sets ~3 per row */
+        min-width: 250px; /* optional, to avoid shrinking too small */
+        border: 1px solid #ccc;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    img{
+        height:100px;
+        width:auto;
+        background-color: none;
+    }
+}
+.shop_swim_section, .shop_bike_section, .shop_run_section {
+    width:400px;
+    gap: 20px;
+    align-items: center; 
+    justify-items: center;
+    background-color: v.$background-shadow;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.shop_run_div, .shop_swim_div, .shop_bike_div{ // specific style for the shop sections
+    @include m.grid (grid, repeat(2, 1fr), auto, 10px); // Using the grid mixin
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+}
+
+.shop_card { // creating a product card for each item in the shop
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute items evenly within the card */
+    align-items: center; /* Center items horizontally */
+    text-align: center; /* Center-align text */
+    padding: 10px;
+    box-sizing: border-box;
+    width: 175px; /* Set a consistent width for all cards */
+    height: 250px; /* Set a consistent height for all cards */
+    border: 1px solid v.$main-color;
+    border-radius: 10px;
+    background-color: v.$background-shadow;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.add_button{ // including button for eventual add to cart functionality
+    background-color: v.$main-color; /* Button background color */
+    height: 30px;
+    color: v.$typo-color; /* Button text color */
+    border: none; /* Remove default border */
+    padding: 3px 20px; /* Add padding for better appearance */
+    border-radius: 5px; /* Round the corners of the button */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 16px; /* Set font size for the button text */
+}
+
+// Specific footer styles
+
+footer {
+    position: relative;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: v.$main-color;
+    color: v.$typo-color;
+    padding: 20px;
+    margin-bottom: 0%;
+    width: 100%;
+    box-sizing: border-box;
+    p {
+        margin: 0px;
+        text-align: center;
+    }
+}
+
+// Media queries for Mobile
+
+@media (max-width: 720px) {
+    .navbar {
+      flex-direction: column; // Stack the navbar items vertically
+    }
+
+    .navbar-expand-lg {
+      .navbar-collapse {
+        display: none; // Hide the menu by default
+            &.show {
+                display: flex; // Show the menu when expanded
+                flex-direction: row; // Align the menu items horizontally
+                justify-content: space-between; // Distribute items evenly
+                gap: 20px; // Add spacing between items
+                width: 100%; // Ensure the menu spans the full width
+            }
+        }
+    }
+
+    .navbar-nav {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .navbar-toggler {
+      display: block; // Show the burger button
+    }
+
+    .index_main .index_section {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        div {
+            width: 300px;
+            height: auto;
+        }
+    }
+
+    .news_main {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .news_highlight {
+      order: 1; // Ensure news_highlight appears first
+    }
+
+    .news_other {
+      order: 2; // Ensure news_other appears second
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap; // Allow wrapping if needed
+      justify-content: center;
+      gap: 20px;
+      div {
+        width: 45%; // Each item takes up 45%
+        text-align: center;
+        }
+    }
+
+    .shop_swim_section{
+        @include m.shop (375px, 20px, 20px); // Using the shop mixin
+    }
+
+    .shop_bike_section{
+        @include m.shop (375px, 20px, 20px); // Using the shop mixin
+    }
+
+    .shop_run_section {
+        @include m.shop (375px, 20px, 20px); // Using the shop mixin
+    }
+
+    footer { //nested footer styles for mobile
+        div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+        }
+      form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+      p {
+            margin: 0;
+            text-align: center;
+        }
+    }
+}
+
+// Media queries for Tablets
+
+@media screen and (min-width: 721px) and (max-width: 1024px) {
+   .index_main .index_section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      
+      div {
+        width: 45%; // 45% width each
+        height: 50%;
+            &:nth-child(1) {
+            order: 1; // SWIM
+            }
+            &:nth-child(2) {
+            order: 2; // BIKE
+            }
+            &:nth-child(3) {
+            order: 3; // RUN
+            width: 90%; // Span full width
+            }
+        }
+    }
+}
+
+
+
