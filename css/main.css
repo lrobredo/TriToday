@@ -267,9 +267,9 @@ ul {
 .shop_card {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  text-align: center;
+  justify-content: space-between; /* Distribute items evenly within the card */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center-align text */
   padding: 10px;
   box-sizing: border-box;
   width: 175px; /* Set a consistent width for all cards */
@@ -340,6 +340,18 @@ footer p {
   .index_main .index_section div {
     width: 300px;
     height: auto;
+  }
+  .index_main .index_section .animate__animated .animate__backInRight {
+    animation-duration: 2s;
+  }
+  .index_main .index_section .animate__animated .animate__backInRight:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .index_main .index_section .animate__animated .animate__backInRight:nth-child(2) {
+    animation-delay: 1s;
+  }
+  .index_main .index_section .animate__animated .animate__backInRight:nth-child(3) {
+    animation-delay: 2s;
   }
   .news_main {
     display: flex;
@@ -415,4 +427,4 @@ footer p {
   }
 }
 
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=main.css.map */

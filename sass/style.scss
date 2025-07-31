@@ -1,7 +1,7 @@
 @use "./utilities/_variables" as v; //bringin in variables and including redefinitions
 @use "./utilities/_mixin" as m; //bringing in mixins and including redefinitions
 
-@import "./base/_reset.scss"; // importing the reset with general sytles
+@use "./base/_reset.scss"; // importing the reset with general sytles
 
 // Specific header styles
 header {
@@ -36,7 +36,7 @@ header {
 }
 .navbar-expand-lg .navbar-collapse.show {
         display: flex; /* Show the menu when expanded */
-        flex-direction: row; /* Align the menu items horizontally */
+        flex-direction: column; /* Align the menu items horizontally */
         justify-content: flex-start; /* Distribute items evenly */
         gap: 20px; /* Add spacing between items */
         width: 100%; /* Ensure the menu spans the full width */
@@ -44,7 +44,7 @@ header {
         margin:0;
 }
 .navbar-nav {
-        flex-direction: row; 
+        flex-direction: column; 
         align-items: center;
         justify-content: flex-start;
         padding-left:10px;
@@ -88,6 +88,7 @@ ul {
         gap: 20px; // Adds spacing between the divs
         flex-wrap: nowrap; // Allows wrapping to the next line if needed
         text-align: center; // Center-aligns the text inside the divs
+        
         .triathlon_legs {
             display: flex;
             justify-content: center; 
@@ -226,9 +227,9 @@ ul {
 .shop_card { // creating a product card for each item in the shop
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Distribute items evenly within the card */
-    align-items: center; /* Center items horizontally */
-    text-align: center; /* Center-align text */
+    justify-content: space-between;
+    align-items: center; 
+    text-align: center;
     padding: 10px;
     box-sizing: border-box;
     width: 175px; /* Set a consistent width for all cards */
@@ -273,7 +274,7 @@ footer {
 
 // Media queries for Mobile
 
-@media (max-width: 720px) {
+@media (max-width: 720px) { 
     .navbar {
       flex-direction: column; // Stack the navbar items vertically
     }
@@ -283,7 +284,7 @@ footer {
         display: none; // Hide the menu by default
             &.show {
                 display: flex; // Show the menu when expanded
-                flex-direction: row; // Align the menu items horizontally
+                flex-direction: column; // Align the menu items horizontally
                 justify-content: space-between; // Distribute items evenly
                 gap: 20px; // Add spacing between items
                 width: 100%; // Ensure the menu spans the full width
@@ -292,7 +293,7 @@ footer {
     }
 
     .navbar-nav {
-      flex-direction: row;
+      flex-direction: column;
       align-items: center;
     }
 
@@ -367,7 +368,8 @@ footer {
 // Media queries for Tablets
 
 @media screen and (min-width: 721px) and (max-width: 1024px) {
-   .index_main .index_section {
+   
+    .index_main .index_section {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
